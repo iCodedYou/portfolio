@@ -1,0 +1,138 @@
+.tab-bar {
+  display: flex;
+  background: #0d1117;
+  border-bottom: 1px solid #21262d;
+  overflow-x: auto;
+  min-height: 35px;
+  align-items: center;
+}
+
+.tab-bar::-webkit-scrollbar {
+  height: 3px;
+}
+
+.tab-bar::-webkit-scrollbar-track {
+  background: #0d1117;
+}
+
+.tab-bar::-webkit-scrollbar-thumb {
+  background: #30363d;
+  border-radius: 2px;
+}
+
+.tab {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 8px 12px;
+  background: #0d1117;
+  border-right: 1px solid #21262d;
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+  white-space: nowrap;
+  min-width: 120px;
+  animation: slideInDown 0.4s ease-out;
+}
+
+@keyframes slideInDown {
+  from {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.tab:hover {
+  background: #161b22;
+  transform: translateY(-1px);
+}
+
+.tab.active {
+  background: #0d1117;
+  color: #ffffff;
+  border-bottom: 2px solid #007acc;
+}
+
+.tab-icon {
+  font-size: 14px;
+  transition: all 0.3s ease;
+}
+
+.tab:hover .tab-icon {
+  transform: scale(1.2);
+}
+
+.tab-name {
+  font-size: 13px;
+  color: #e6edf3;
+  transition: color 0.2s ease;
+}
+
+.tab.active .tab-name {
+  color: #ffffff;
+}
+
+.tab-close {
+  background: none;
+  border: none;
+  color: #6e7681;
+  cursor: pointer;
+  font-size: 11px;
+  padding: 2px;
+  border-radius: 2px;
+  transition: all 0.2s ease;
+  opacity: 0;
+  margin-left: auto;
+}
+
+.tab:hover .tab-close {
+  opacity: 1;
+}
+
+.tab-close:hover {
+  background: #30363d;
+  color: #ffffff;
+  transform: scale(1.2);
+}
+
+.tab-indicator {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: #007acc;
+  animation: slideInIndicator 0.3s ease-out;
+}
+
+@keyframes slideInIndicator {
+  from {
+    width: 0;
+    left: 50%;
+  }
+  to {
+    width: 100%;
+    left: 0;
+  }
+}
+
+.empty-tab-area {
+  padding: 0 16px;
+  color: #6e7681;
+  font-size: 13px;
+  font-style: italic;
+  animation: fadeIn 0.5s ease-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}

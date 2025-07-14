@@ -1,0 +1,179 @@
+.sidebar {
+  width: 240px;
+  background: #161b22;
+  border-right: 1px solid #30363d;
+  display: flex;
+  flex-direction: column;
+  transition: width 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  overflow: hidden;
+}
+
+.sidebar.collapsed {
+  width: 0;
+}
+
+.sidebar-header {
+  padding: 8px 16px;
+  background: #0d1117;
+  border-bottom: 1px solid #30363d;
+}
+
+.explorer-title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.title-text {
+  font-size: 11px;
+  font-weight: 600;
+  color: #f0f6fc;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+}
+
+.header-actions {
+  display: flex;
+  gap: 4px;
+}
+
+.collapse-btn {
+  background: none;
+  border: none;
+  color: #8b949e;
+  cursor: pointer;
+  padding: 4px;
+  border-radius: 3px;
+  font-size: 12px;
+  transition: all 0.2s ease;
+}
+
+.collapse-btn:hover {
+  background: #21262d;
+  color: #f0f6fc;
+  transform: scale(1.1);
+}
+
+.file-explorer {
+  flex: 1;
+  overflow-y: auto;
+  padding: 8px 0;
+}
+
+.project-folder {
+  padding: 0 16px;
+}
+
+.project-header {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin-bottom: 8px;
+  padding: 6px 0;
+}
+
+.project-icon {
+  font-size: 16px;
+}
+
+.project-name {
+  font-size: 11px;
+  font-weight: 600;
+  color: #f0f6fc;
+  letter-spacing: 0.3px;
+}
+
+.file-tree {
+  margin-left: 8px;
+}
+
+.folder-container {
+  margin-bottom: 2px;
+}
+
+.folder {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 4px 8px;
+  cursor: pointer;
+  border-radius: 3px;
+  transition: all 0.2s ease;
+  animation: slideInLeft 0.5s ease-out;
+}
+
+.folder:hover {
+  background: #21262d;
+  transform: translateX(2px);
+}
+
+.folder.expanded {
+  color: #f0f6fc;
+}
+
+.folder-icon {
+  font-size: 14px;
+  transition: all 0.3s ease;
+}
+
+.folder.expanded .folder-icon {
+  transform: scale(1.1);
+}
+
+.folder-name {
+  font-size: 13px;
+  color: #f0f6fc;
+}
+
+.folder-children {
+  margin-left: 16px;
+  margin-top: 2px;
+  animation: slideDown 0.3s ease-out;
+}
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.file {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 3px 8px;
+  cursor: pointer;
+  border-radius: 3px;
+  transition: all 0.2s ease;
+  animation: slideInLeft 0.5s ease-out;
+  margin-bottom: 1px;
+}
+
+.file:hover {
+  background: #21262d;
+  transform: translateX(4px);
+}
+
+.file-icon {
+  font-size: 14px;
+  transition: all 0.3s ease;
+}
+
+.file:hover .file-icon {
+  transform: scale(1.2) rotate(5deg);
+}
+
+.file-name {
+  font-size: 13px;
+  color: #e6edf3;
+  transition: color 0.2s ease;
+}
+
+.file:hover .file-name {
+  color: #ffffff;
+}

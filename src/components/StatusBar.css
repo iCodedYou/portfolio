@@ -1,0 +1,109 @@
+.status-bar {
+  height: 22px;
+  background: #007acc;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 10px;
+  font-size: 11px;
+  color: #ffffff;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  user-select: none;
+}
+
+.status-left,
+.status-center,
+.status-right {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.status-center {
+  flex: 1;
+  justify-content: center;
+}
+
+.status-item {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  padding: 2px 6px;
+  border-radius: 3px;
+  transition: all 0.2s ease;
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+.status-item:hover {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.status-item .icon {
+  font-size: 10px;
+}
+
+.git-branch {
+  font-weight: 600;
+}
+
+.problems {
+  color: #ffffff;
+}
+
+.warnings {
+  color: #ffd700;
+}
+
+.portfolio-status {
+  background: rgba(40, 167, 69, 0.2);
+  border: 1px solid #28a745;
+  border-radius: 12px;
+  padding: 3px 8px;
+}
+
+.status-dot {
+  width: 6px;
+  height: 6px;
+  background: #28a745;
+  border-radius: 50%;
+  animation: statusPulse 2s infinite;
+}
+
+@keyframes statusPulse {
+  0%, 100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.6;
+    transform: scale(1.2);
+  }
+}
+
+.line-info {
+  font-family: 'Fira Code', monospace;
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.language {
+  font-weight: 500;
+}
+
+.encoding {
+  opacity: 0.8;
+}
+
+.time {
+  font-family: 'Fira Code', monospace;
+  font-weight: 600;
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.notifications {
+  transition: transform 0.2s ease;
+}
+
+.notifications:hover {
+  transform: scale(1.2);
+}
